@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+ 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 50px;
+    }
+    #quote {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      background-color: #6d6875;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #b5838d;
+    }
+  </style>
+</head>
+<body>
+  <h1>What happen, no status view, is everything alright?</h1>
+  <p id="quote">Click the button to get inspired!</p>
+  <button onclick="generateQuote()">Get a Quote</button>
+  <script>
+    const quotes = [
+      "Believe in yourself and all that you are.",
+      "The future belongs to those who believe in the beauty of their dreams.",
+      "Don't watch the clock; do what it does. Keep going.",
+      "The harder you work for something, the greater you'll feel when you achieve it.",
+      "Success is not final, failure is not fatal: It is the courage to continue that counts."
+    ];
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').innerText = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
